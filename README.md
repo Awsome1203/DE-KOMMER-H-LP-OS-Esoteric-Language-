@@ -11,10 +11,10 @@ Line represent the digit so 3 line is 3 digit
 
 Example:
 
-1 DE KOMMER! HÆLP OS! DE KOMMER! HÆLP OS! DE KOMMER! ---> 0
-2 DE KOMMER! HÆLP OS! DE KOMMER! HÆLP ---> 7
-3 DE ---> 1
-4 DE KOMMER! HÆLP OS! DE KOMMER! HÆLP OS! DE KOMMER! HÆLP OS! ---> Input as ASCII
+1st line DE KOMMER! HÆLP OS! DE KOMMER! HÆLP OS! DE KOMMER! (0)
+2nd DE KOMMER! HÆLP OS! DE KOMMER! HÆLP (7)
+3rd DE (1)
+4th DE KOMMER! HÆLP OS! DE KOMMER! HÆLP OS! DE KOMMER! HÆLP OS! (Input as ASCII)
 
 So the ASCII of 071 to string is "G"
 
