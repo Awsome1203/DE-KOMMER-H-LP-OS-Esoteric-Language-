@@ -1,5 +1,6 @@
 import os
 import subprocess
+import Outputbackup
 
 #
 # This is DE KOMMER! HÆLP OS! Esoteric Language or (G&BLang, GNBLang)
@@ -47,6 +48,7 @@ import subprocess
 # FORWARD MARCH!
 # DON'T GIVE UP THE SHIP!
 
+# Recommended to run twice if you made a new code.
 # This is a basic esoteric language were 4 instruction "DE KOMMER! HÆLP OS!".
 
 order2 = "" # String of characters
@@ -135,7 +137,7 @@ def order(out):
 def main():
     folder1 = os.getcwd()
     folder2 = os.path.join(folder1)
-    input1 = "Input.txt"
+    input1 = "Input.gnb"
     input2 = os.path.join(folder2, input1)
     output1 = "Outputbackup.py"
     output2 = os.path.join(folder2, output1)
@@ -149,8 +151,9 @@ def main():
         fix_it = order2.replace("\\n", "\n") # It gives you more new lines of code
         with open(output2, "w", encoding="utf-8") as x:
             x.write(fix_it)
-        runner = subprocess.run(["python3", output2], check=True, text=True, capture_output=True)
-        print(runner.stdout)
+        Outputbackup.run()
+        # runner = subprocess.run(["python3", output2], check=True, text=True, capture_output=True)
+        # print(runner.stdout)
     except OSError:
         print("DE KOMMER! HÆLP OS!!")
     except subprocess.CalledProcessError:
