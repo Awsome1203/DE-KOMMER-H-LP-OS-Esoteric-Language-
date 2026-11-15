@@ -1,6 +1,7 @@
 import os
 import subprocess
 import Outputbackup
+import importlib.util as gnb
 
 #
 # This is DE KOMMER! HÆLP OS! Esoteric Language or (G&BLang, GNBLang)
@@ -151,14 +152,25 @@ def main():
         fix_it = order2.replace("\\n", "\n") # It gives you more new lines of code
         with open(output2, "w", encoding="utf-8") as x:
             x.write(fix_it)
-        Outputbackup.run()
+        # Outputbackup.run()
         # runner = subprocess.run(["python3", output2], check=True, text=True, capture_output=True)
+        # subprocess.run(["python3", output2], check=True)
         # print(runner.stdout)
+        if os.path.exists(order2):
+            ok = gnb.spec_from_file_location(order2)
+            ok2 = gnb.module_from_spec(ok)
+            ok.loader.exec_module(ok2)
+            ok2.greet()
+            pass
+        else:
+            print("DE KOMMER! HÆLP OS!!")
+        
     except OSError:
         print("DE KOMMER! HÆLP OS!!")
     except subprocess.CalledProcessError:
         print("DE KOMMER! HÆLP OS!!")
     except Exception:
         print("DE KOMMER! HÆLP OS!!!")
+    
 
 main()
