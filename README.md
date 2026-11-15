@@ -23,3 +23,4 @@ DE KOMMER! HÆLP OS! DE KOMMER! HÆLP OS! DE KOMMER! is Zero not to be confuse
 DE KOMMER! HÆLP OS! DE KOMMER! HÆLP OS! DE KOMMER! HÆLP OS! can inserted as ASCII decimal
 The interpreter converts "DE KOMMER! HÆLP OS!" into a string from ASCII then converts to python source code
 To program, you mush write lines of code for digits and create new ASCII Character in order to make program works
+Recommended to run the interpreter twice if you made a new code
